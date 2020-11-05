@@ -1,0 +1,40 @@
+***** origin *****
+calculate_pi() = 3.1415926515899706
+  1.913203 seconds (25.62 k allocations: 1.307 MiB)
+***** with mpi *****
+[1604569712.317254] [d17-27:9655 :0]         parser.c:1600 UCX  WARN  unused env variable: UCX_ERROR_SIGNALS (set UCX_WARN_UNUSED_ENV_VARS=n to suppress this warning)
+Node 0 has partial value 3.1415926535899708
+my_pi = 3.1415926535899708
+Execution timme (s) = 1.924714675
+***** origin *****
+calculate_pi() = 3.1415926515899706
+  1.906612 seconds (25.62 k allocations: 1.307 MiB)
+calculate_pi() = 3.1415926515899706
+  1.909192 seconds (25.62 k allocations: 1.307 MiB)
+***** with mpi *****
+[1604569720.809044] [d17-27:11030:0]         parser.c:1600 UCX  WARN  unused env variable: UCX_ERROR_SIGNALS (set UCX_WARN_UNUSED_ENV_VARS=n to suppress this warning)
+[1604569720.829252] [d17-28:22259:0]         parser.c:1600 UCX  WARN  unused env variable: UCX_ERROR_SIGNALS (set UCX_WARN_UNUSED_ENV_VARS=n to suppress this warning)
+Node 1 has partial value 1.5707963272947625
+Node 0 has partial value 1.5707963272947625
+my_pi = 3.141592654589525
+Execution timme (s) = 1.04009812
+***** origin *****
+calculate_pi() = 3.1415926515899706
+  1.907121 seconds (25.62 k allocations: 1.307 MiB)
+calculate_pi() = 3.1415926515899706
+  1.907880 seconds (25.62 k allocations: 1.307 MiB)
+calculate_pi() = 3.1415926515899706
+  1.906948 secondscalculate_pi() = 3.1415926515899706
+  1.908012 seconds (25.62 k allocations: 1.307 MiB)
+ (25.62 k allocations: 1.307 MiB)
+***** with mpi *****
+[1604569730.533220] [d17-27:12606:0]         parser.c:1600 UCX  WARN  unused env variable: UCX_ERROR_SIGNALS (set UCX_WARN_UNUSED_ENV_VARS=n to suppress this warning)
+[1604569730.545137] [d17-30:7140 :0]         parser.c:1600 UCX  WARN  unused env variable: UCX_ERROR_SIGNALS (set UCX_WARN_UNUSED_ENV_VARS=n to suppress this warning)
+[1604569730.545246] [d17-28:23901:0]         parser.c:1600 UCX  WARN  unused env variable: UCX_ERROR_SIGNALS (set UCX_WARN_UNUSED_ENV_VARS=n to suppress this warning)
+[1604569730.561939] [d17-29:4084 :0]         parser.c:1600 UCX  WARN  unused env variable: UCX_ERROR_SIGNALS (set UCX_WARN_UNUSED_ENV_VARS=n to suppress this warning)
+Node 3 has partial value 0.7853981641474658
+Node 1 has partial value 0.7853981641474658
+Node 0 has partial value 0.7853981641474658
+Node 2 has partial value 0.7853981641474658
+my_pi = 3.141592656589863
+Execution timme (s) = 0.576425483
