@@ -1,0 +1,26 @@
+***** origin *****
+calculate_pi() = 3.1415726534981623
+  0.016740 seconds (22.62 k allocations: 1.229 MiB)
+***** with mpi *****
+thread_pi() = 3.1415726534981374
+  0.315608 seconds (78.31 k allocations: 4.189 MiB)
+***** origin *****
+calculate_pi() = 3.1415726534981623
+  0.017014 seconds (22.62 k allocations: 1.229 MiB)
+***** with mpi *****
+thread_pi() = 3.1415726534981574
+  0.274620 secondsthread_pi() = 3.1415726534981427
+  0.299375 seconds (78.31 k allocations: 4.189 MiB)
+ (78.31 k allocations: 4.189 MiB)
+***** origin *****
+calculate_pi() = 3.1415726534981623
+  0.017054 seconds (22.62 k allocations: 1.229 MiB)
+***** with mpi *****
+thread_pi() = 3.1415726534981876
+  0.123241 seconds (78.31 k allocations: 4.189 MiB)
+thread_pi() = 3.1415726534981596
+  0.134466 seconds (78.31 k allocations: 4.189 MiB)
+thread_pi() = 3.141572653498119
+  0.138886 seconds (78.31 k allocations: 4.189 MiB)
+thread_pi() = 3.141572653498174
+  0.155318 seconds (78.31 k allocations: 4.189 MiB)
