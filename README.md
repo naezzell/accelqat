@@ -119,7 +119,9 @@ where export can be added to list at the end with "solve_unitary," "solve_schrod
 
 ## Experiments
 ### Base line
-#### performance of using MPI on Pi
+#### Performance of using MPI on Pi
 ![image](https://user-images.githubusercontent.com/18574971/100591207-48138500-32aa-11eb-9941-3065a0114fc7.png)
 ![image](https://user-images.githubusercontent.com/18574971/100591214-4b0e7580-32aa-11eb-901f-36cfc77ae21c.png)
+
+see detailed data [HERE](https://github.com/naezzell/accelqat/tree/main/performance_test/pi_test/test_result) (including CPU info)
 
