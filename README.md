@@ -116,4 +116,10 @@ where export can be added to list at the end with "solve_unitary," "solve_schrod
     Note: If it doesn't work, try restarting Julia and loading again. You may have tried to load QuantumAnnealingTools before making the changes locally. 
     
 5. If you want to run this command, you'll have to load with GPU, so check out CUDA for Julia above
-    
+
+## Experiments
+### Base line
+#### performance of using MPI on Pi
+![image](https://user-images.githubusercontent.com/18574971/100591207-48138500-32aa-11eb-9941-3065a0114fc7.png)
+![image](https://user-images.githubusercontent.com/18574971/100591214-4b0e7580-32aa-11eb-901f-36cfc77ae21c.png)
+
