@@ -1,0 +1,78 @@
+***** Strong scaling *****
+[1606787693.841054] [d05-30:25010:0]         parser.c:1600 UCX  WARN  unused env variable: UCX_ERROR_SIGNALS (set UCX_WARN_UNUSED_ENV_VARS=n to suppress this warning)
+Node 0 has partial value 3.1415926535899708
+my_pi = 3.1415926535899708
+Execution timme (s) = 1.933949643
+[1606787697.210788] [d05-30:25043:0]         parser.c:1600 UCX  WARN  unused env variable: UCX_ERROR_SIGNALS (set UCX_WARN_UNUSED_ENV_VARS=n to suppress this warning)
+[1606787699.394951] [e13-28:9335 :0]         parser.c:1600 UCX  WARN  unused env variable: UCX_ERROR_SIGNALS (set UCX_WARN_UNUSED_ENV_VARS=n to suppress this warning)
+Node 0 has partial value 1.5707963272947625
+Node 1 has partial value 1.5707963272947625
+my_pi = 3.141592654589525
+Execution timme (s) = 2.187681375
+[1606787702.966354] [d05-30:25106:0]         parser.c:1600 UCX  WARN  unused env variable: UCX_ERROR_SIGNALS (set UCX_WARN_UNUSED_ENV_VARS=n to suppress this warning)
+[1606787703.105308] [e13-28:9410 :0]         parser.c:1600 UCX  WARN  unused env variable: UCX_ERROR_SIGNALS (set UCX_WARN_UNUSED_ENV_VARS=n to suppress this warning)
+[1606787707.993283] [e13-29:18722:0]         parser.c:1600 UCX  WARN  unused env variable: UCX_ERROR_SIGNALS (set UCX_WARN_UNUSED_ENV_VARS=n to suppress this warning)
+[1606787708.010464] [e13-30:22884:0]         parser.c:1600 UCX  WARN  unused env variable: UCX_ERROR_SIGNALS (set UCX_WARN_UNUSED_ENV_VARS=n to suppress this warning)
+Node 0 has partial value 0.7853981641474658
+Node 2 has partial value 0.7853981641474658
+Node 3 has partial value 0.7853981641474658
+Node 1 has partial value 0.7853981641474658
+my_pi = 3.141592656589863
+Execution timme (s) = 1.1577187389999999
+[1606787710.602008] [d05-30:25138:0]         parser.c:1600 UCX  WARN  unused env variable: UCX_ERROR_SIGNALS (set UCX_WARN_UNUSED_ENV_VARS=n to suppress this warning)
+[1606787710.633311] [e13-28:9454 :0]         parser.c:1600 UCX  WARN  unused env variable: UCX_ERROR_SIGNALS (set UCX_WARN_UNUSED_ENV_VARS=n to suppress this warning)
+[1606787710.655325] [e13-30:22917:0]         parser.c:1600 UCX  WARN  unused env variable: UCX_ERROR_SIGNALS (set UCX_WARN_UNUSED_ENV_VARS=n to suppress this warning)
+[1606787710.657993] [e13-29:18754:0]         parser.c:1600 UCX  WARN  unused env variable: UCX_ERROR_SIGNALS (set UCX_WARN_UNUSED_ENV_VARS=n to suppress this warning)
+[1606787719.802010] [e13-32:32250:0]         parser.c:1600 UCX  WARN  unused env variable: UCX_ERROR_SIGNALS (set UCX_WARN_UNUSED_ENV_VARS=n to suppress this warning)
+[1606787719.937662] [e13-34:9288 :0]         parser.c:1600 UCX  WARN  unused env variable: UCX_ERROR_SIGNALS (set UCX_WARN_UNUSED_ENV_VARS=n to suppress this warning)
+[1606787719.961746] [e13-33:1001 :0]         parser.c:1600 UCX  WARN  unused env variable: UCX_ERROR_SIGNALS (set UCX_WARN_UNUSED_ENV_VARS=n to suppress this warning)
+[1606787719.965665] [e13-31:16987:0]         parser.c:1600 UCX  WARN  unused env variable: UCX_ERROR_SIGNALS (set UCX_WARN_UNUSED_ENV_VARS=n to suppress this warning)
+Node 0 has partial value 0.39269908257364255
+Node 3 has partial value 0.39269908257364255
+Node 5 has partial value 0.39269908257364255
+Node 4 has partial value 0.39269908257364255
+Node 2 has partial value 0.39269908257364255
+Node 6 has partial value 0.39269908257364255
+Node 7 has partial value 0.39269908257364255
+Node 1 has partial value 0.39269908257364255
+my_pi = 3.1415926605891404
+Execution timme (s) = 0.6477880540000001
+***** Weak scaling *****
+[1606787721.978772] [d05-30:25175:0]         parser.c:1600 UCX  WARN  unused env variable: UCX_ERROR_SIGNALS (set UCX_WARN_UNUSED_ENV_VARS=n to suppress this warning)
+Node 0 has partial value 3.1415926535899708
+my_pi = 3.1415926535899708
+Execution timme (s) = 1.79393279
+[1606787725.105493] [d05-30:25203:0]         parser.c:1600 UCX  WARN  unused env variable: UCX_ERROR_SIGNALS (set UCX_WARN_UNUSED_ENV_VARS=n to suppress this warning)
+[1606787725.130372] [e13-28:9535 :0]         parser.c:1600 UCX  WARN  unused env variable: UCX_ERROR_SIGNALS (set UCX_WARN_UNUSED_ENV_VARS=n to suppress this warning)
+Node 0 has partial value 1.5707963270446585
+Node 1 has partial value 1.5707963270446585
+my_pi = 3.141592654089317
+Execution timme (s) = 4.213882002
+[1606787730.692454] [d05-30:25234:0]         parser.c:1600 UCX  WARN  unused env variable: UCX_ERROR_SIGNALS (set UCX_WARN_UNUSED_ENV_VARS=n to suppress this warning)
+[1606787730.713980] [e13-30:22995:0]         parser.c:1600 UCX  WARN  unused env variable: UCX_ERROR_SIGNALS (set UCX_WARN_UNUSED_ENV_VARS=n to suppress this warning)
+[1606787730.719730] [e13-28:9578 :0]         parser.c:1600 UCX  WARN  unused env variable: UCX_ERROR_SIGNALS (set UCX_WARN_UNUSED_ENV_VARS=n to suppress this warning)
+[1606787730.726978] [e13-29:18832:0]         parser.c:1600 UCX  WARN  unused env variable: UCX_ERROR_SIGNALS (set UCX_WARN_UNUSED_ENV_VARS=n to suppress this warning)
+Node 0 has partial value 0.7853981635848835
+Node 2 has partial value 0.7853981635848835
+Node 3 has partial value 0.7853981635848835
+Node 1 has partial value 0.7853981635848835
+my_pi = 3.141592654339534
+Execution timme (s) = 4.250583406
+[1606787736.275101] [d05-30:25265:0]         parser.c:1600 UCX  WARN  unused env variable: UCX_ERROR_SIGNALS (set UCX_WARN_UNUSED_ENV_VARS=n to suppress this warning)
+[1606787736.287819] [e13-28:9621 :0]         parser.c:1600 UCX  WARN  unused env variable: UCX_ERROR_SIGNALS (set UCX_WARN_UNUSED_ENV_VARS=n to suppress this warning)
+[1606787736.288069] [e13-30:23027:0]         parser.c:1600 UCX  WARN  unused env variable: UCX_ERROR_SIGNALS (set UCX_WARN_UNUSED_ENV_VARS=n to suppress this warning)
+[1606787736.295898] [e13-29:18866:0]         parser.c:1600 UCX  WARN  unused env variable: UCX_ERROR_SIGNALS (set UCX_WARN_UNUSED_ENV_VARS=n to suppress this warning)
+[1606787736.296488] [e13-31:17087:0]         parser.c:1600 UCX  WARN  unused env variable: UCX_ERROR_SIGNALS (set UCX_WARN_UNUSED_ENV_VARS=n to suppress this warning)
+[1606787736.297466] [e13-32:32351:0]         parser.c:1600 UCX  WARN  unused env variable: UCX_ERROR_SIGNALS (set UCX_WARN_UNUSED_ENV_VARS=n to suppress this warning)
+[1606787736.301288] [e13-34:9388 :0]         parser.c:1600 UCX  WARN  unused env variable: UCX_ERROR_SIGNALS (set UCX_WARN_UNUSED_ENV_VARS=n to suppress this warning)
+[1606787736.302123] [e13-33:1108 :0]         parser.c:1600 UCX  WARN  unused env variable: UCX_ERROR_SIGNALS (set UCX_WARN_UNUSED_ENV_VARS=n to suppress this warning)
+Node 0 has partial value 0.3926990818080848
+Node 3 has partial value 0.3926990818080848
+Node 6 has partial value 0.3926990818080848
+Node 5 has partial value 0.3926990818080848
+Node 2 has partial value 0.3926990818080848
+Node 7 has partial value 0.3926990818080848
+Node 4 has partial value 0.3926990818080848
+Node 1 has partial value 0.3926990818080848
+my_pi = 3.1415926544646786
+Execution timme (s) = 4.261621514

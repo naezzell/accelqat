@@ -27,5 +27,8 @@ function mpi_pi(NBIN::Int= 1000000000)::Float64
     return my_pi
 end
 
-
-mpi_pi()
+if length(ARGS)>0
+    mpi_pi(parse(Int, ARGS[1]))
+else
+    mpi_pi()
+end

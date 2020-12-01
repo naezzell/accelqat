@@ -9,4 +9,8 @@ function calculate_pi(NBIN::Int= 1000000000)::Float64
     return pi
 end
 
-@time @show calculate_pi()
+if length(ARGS)>0
+    @time @show calculate_pi(parse(Int, ARGS[1]))
+else
+    @time @show calculate_pi()
+end
