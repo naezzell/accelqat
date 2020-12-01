@@ -118,10 +118,15 @@ where export can be added to list at the end with "solve_unitary," "solve_schrod
 5. If you want to run this command, you'll have to load with GPU, so check out CUDA for Julia above
 
 ## Experiments
-### Base line
+### Pi code
 #### Performance of using MPI on Pi
-![image](https://user-images.githubusercontent.com/18574971/100591207-48138500-32aa-11eb-9941-3065a0114fc7.png)
-![image](https://user-images.githubusercontent.com/18574971/100591214-4b0e7580-32aa-11eb-901f-36cfc77ae21c.png)
 
-see detailed data [HERE](https://github.com/naezzell/accelqat/tree/main/performance_test/pi_test/test_result) (including CPU info)
+parallel efficiency
 
+![image](https://user-images.githubusercontent.com/18574971/100689201-e0584b00-3338-11eb-9f51-3620d8d8908a.png)
+![image](https://user-images.githubusercontent.com/18574971/100689212-e3ebd200-3338-11eb-80c6-c66bd13e4864.png)
+![image](https://user-images.githubusercontent.com/18574971/100689222-e6e6c280-3338-11eb-84eb-996cb6bf6ffd.png)
+
+see detailed data [HERE](https://github.com/naezzell/accelqat/tree/main/performance_test/pi_test/test_result/pi_pe_result)(including CPU info).
+
+Notice: for the situation of one processor, mpi inter-processor communication did not happen, thus take less time then expect, and the data point is ignored in the plot.
