@@ -1,5 +1,6 @@
 using DifferentialEquations
 using CUDA
+using LinearAlgebra
 
 function cpu_example(n)
     tf = 10
