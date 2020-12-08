@@ -1,0 +1,114 @@
+========loading and compiling========
+ 23.466416 seconds (45.54 M allocations: 2.254 GiB, 4.94% gc time)
+Downloading artifact: CUDA102
+[?25l[1A[2K[?25hDownloading artifact: CUDA101
+[?25l[1A[2K[?25hDownloading artifact: CUDA100
+[?25l[1A[2K[?25hDownloading artifact: CUDA92
+[?25l[1A[2K[?25hDownloading artifact: CUDA90
+[?25l[1A[2K[?25h 62.265819 seconds (69.23 M allocations: 3.356 GiB, 3.23% gc time)
+
+========start testing========
+
+--------scaling n on cpu--------
+n=2; tf=32
+  4.632309 seconds (7.99 M allocations: 437.881 MiB, 2.94% gc time)
+  0.001329 seconds (4.10 k allocations: 341.484 KiB)
+  0.001285 seconds (3.84 k allocations: 320.234 KiB)
+n=4; tf=32
+  4.677516 seconds (8.16 M allocations: 446.698 MiB, 3.64% gc time)
+  0.003045 seconds (6.72 k allocations: 572.547 KiB)
+  0.002259 seconds (6.72 k allocations: 572.547 KiB)
+n=6; tf=32
+  0.282255 seconds (852.99 k allocations: 40.709 MiB)
+  0.017151 seconds (10.72 k allocations: 4.827 MiB)
+  0.022183 seconds (14.26 k allocations: 5.509 MiB)
+n=8; tf=32
+  1.261130 seconds (963.37 k allocations: 131.842 MiB, 1.47% gc time)
+  0.681127 seconds (15.29 k allocations: 88.586 MiB, 1.53% gc time)
+  0.668917 seconds (15.09 k allocations: 88.453 MiB, 1.23% gc time)
+n=9; tf=32
+  4.149295 seconds (805.86 k allocations: 455.427 MiB, 1.53% gc time)
+  3.355780 seconds (19.26 k allocations: 420.820 MiB, 0.94% gc time)
+  3.782829 seconds (21.44 k allocations: 423.527 MiB, 0.84% gc time)
+n=10; tf=32
+ 25.170063 seconds (899.66 k allocations: 1.992 GiB, 3.52% gc time)
+ 24.069616 seconds (21.45 k allocations: 1.955 GiB, 3.60% gc time)
+ 24.728072 seconds (21.91 k allocations: 1.956 GiB, 3.50% gc time)
+
+--------scaling tf on cpu--------
+n=8; tf=4
+  0.127553 seconds (4.42 k allocations: 81.630 MiB)
+  0.122394 seconds (4.31 k allocations: 81.564 MiB)
+  0.117980 seconds (4.21 k allocations: 81.498 MiB)
+n=8; tf=8
+  0.190849 seconds (5.77 k allocations: 82.496 MiB)
+  0.221085 seconds (6.40 k allocations: 82.894 MiB)
+  0.209366 seconds (6.14 k allocations: 82.728 MiB)
+n=8; tf=16
+  0.370843 seconds (9.62 k allocations: 84.958 MiB)
+  0.408056 seconds (10.25 k allocations: 85.356 MiB, 2.05% gc time)
+  0.418525 seconds (10.46 k allocations: 85.489 MiB, 1.97% gc time)
+n=8; tf=32
+  0.815654 seconds (18.83 k allocations: 90.844 MiB, 1.04% gc time)
+  0.758100 seconds (17.69 k allocations: 90.114 MiB, 1.10% gc time)
+  0.923424 seconds (21.22 k allocations: 92.371 MiB, 0.90% gc time)
+n=8; tf=64
+  1.709556 seconds (38.02 k allocations: 103.114 MiB, 0.48% gc time)
+  1.606107 seconds (35.84 k allocations: 101.720 MiB, 0.51% gc time)
+  1.448188 seconds (32.46 k allocations: 99.562 MiB, 0.57% gc time)
+n=8; tf=128
+  2.938210 seconds (64.34 k allocations: 119.952 MiB, 0.28% gc time)
+  2.809591 seconds (61.16 k allocations: 117.927 MiB, 0.30% gc time)
+  2.748431 seconds (60.12 k allocations: 117.263 MiB, 0.30% gc time)
+
+--------scaling n on gpu--------
+n=2; tf=32
+  0.461675 seconds (398.93 k allocations: 18.835 MiB)
+  0.188499 seconds (103.99 k allocations: 3.922 MiB)
+  0.181987 seconds (100.11 k allocations: 3.789 MiB)
+n=4; tf=32
+  0.227559 seconds (355.46 k allocations: 16.184 MiB)
+  0.051147 seconds (87.68 k allocations: 2.676 MiB)
+  0.063812 seconds (106.62 k allocations: 3.317 MiB)
+n=6; tf=32
+  0.101262 seconds (179.81 k allocations: 8.061 MiB)
+  0.091373 seconds (164.11 k allocations: 7.622 MiB)
+  0.094780 seconds (168.24 k allocations: 7.709 MiB)
+n=8; tf=32
+  0.232889 seconds (266.63 k allocations: 84.252 MiB)
+  0.206689 seconds (241.68 k allocations: 83.133 MiB)
+  0.230471 seconds (271.57 k allocations: 84.040 MiB)
+n=9; tf=32
+  0.608121 seconds (273.90 k allocations: 392.091 MiB, 5.21% gc time)
+  0.694312 seconds (321.66 k allocations: 393.582 MiB, 4.56% gc time)
+  0.617117 seconds (278.93 k allocations: 392.544 MiB, 5.17% gc time)
+n=10; tf=32
+  4.365902 seconds (1.25 M allocations: 1.902 GiB, 19.45% gc time)
+  3.146446 seconds (336.02 k allocations: 1.858 GiB, 27.34% gc time)
+  3.332813 seconds (372.81 k allocations: 1.860 GiB, 25.77% gc time)
+
+--------scaling tf on cpu--------
+n=8; tf=4
+  0.123133 seconds (4.21 k allocations: 81.498 MiB)
+  0.118997 seconds (4.21 k allocations: 81.498 MiB)
+  0.111624 seconds (4.05 k allocations: 81.398 MiB)
+n=8; tf=8
+  0.209962 seconds (6.14 k allocations: 82.728 MiB)
+  0.202683 seconds (5.98 k allocations: 82.629 MiB)
+  0.201913 seconds (5.98 k allocations: 82.629 MiB)
+n=8; tf=16
+  0.400420 seconds (10.20 k allocations: 85.323 MiB)
+  0.433833 seconds (10.71 k allocations: 85.655 MiB, 1.92% gc time)
+  0.342103 seconds (8.95 k allocations: 84.526 MiB)
+n=8; tf=32
+  0.995635 seconds (22.68 k allocations: 93.301 MiB, 0.84% gc time)
+  0.870824 seconds (20.03 k allocations: 91.608 MiB, 0.96% gc time)
+  0.927287 seconds (21.22 k allocations: 92.371 MiB, 0.90% gc time)
+n=8; tf=64
+  1.512957 seconds (33.65 k allocations: 100.325 MiB, 0.56% gc time)
+  1.730853 seconds (38.28 k allocations: 103.280 MiB, 0.48% gc time)
+  1.545746 seconds (34.43 k allocations: 100.823 MiB, 0.54% gc time)
+n=8; tf=128
+  3.374795 seconds (73.18 k allocations: 125.597 MiB, 0.25% gc time)
+  2.737590 seconds (59.76 k allocations: 117.030 MiB, 0.31% gc time)
+  2.716171 seconds (59.19 k allocations: 116.665 MiB, 0.31% gc time)
