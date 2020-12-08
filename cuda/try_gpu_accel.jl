@@ -1,5 +1,5 @@
-using QuantumAnnealingTools, CUDA, DifferentialEquations
-import QuantumAnnealingTools.⊗
+using OpenQuantumTools, CUDA, DifferentialEquations
+import OpenQuantumTools.⊗
 
 function make_connect_tuples(n::Int64)
     """
