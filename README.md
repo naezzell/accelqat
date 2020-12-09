@@ -1,24 +1,30 @@
 # accelqat
-We accelerate the QuantumAnnealingTools.jl package using Julia's equivalent of OpenMP, MPI, and CUDA.
+We accelerate the ~~`QuantumAnnealingTools.jl`~~ [`OpenQuantumTools.jl`](https://github.com/USCqserver/OpenQuantumTools.jl) package using Julia's equivalent of OpenMP, MPI, and CUDA.
+
+Firstly we try pi code with different packages and test the performance. Then, we decide to use CUDA to accelerate the package. It shows the advantage when then calculating scale is large.
 
 ## Setup on HPC
 
-### julia
-
-1. put both `QuantumAnnealingTools.jl` and `Qtbase.jl` in local directory
-2. add julia package, (can also add to .bashrc like we did for MPI)  
+### Julia
+add julia package, (can also add to .bashrc like we did for MPI)  
     `$ module load julia`
 
-3. change package server  
+### install package
+**Notice:** `QuantumAnnealingTools.jl`, `Qtbase.jl` now are open source and change name to [`OpenQuantumTools.jl`](https://github.com/USCqserver/OpenQuantumTools.jl), [`OpenQuantumBase.jl`](https://github.com/USCqserver/OpenQuantumBase.jl).
+Please follow their instruction for installation, if fail, can try with different julia package server like step 2. 
+
+1. put both `QuantumAnnealingTools.jl` and `Qtbase.jl` in local directory
+
+2. change package server  
     `$ export JULIA_PKG_SERVER=pkg.julialang.org`
 
-4. start julia  
+3. start julia  
     `$ julia --project=QuantumAnnealingTools.jl`
 
-5. manually add `QTBase.jl` in package mode (by pressing `]` )  
+4. manually add `QTBase.jl` in package mode (by pressing `]` )  
     `(QuantumAnnealingTools) pkg> add ~/path/to/QTBase.jl`
 
-6. run unit test (better run in compute nodes)  
+5. run unit test (better run in compute nodes)  
     `julia> Pkg.test()` or `(QuantumAnnealingTools) pkg> test`
 
 **Note:** 
@@ -28,7 +34,7 @@ We accelerate the QuantumAnnealingTools.jl package using Julia's equivalent of O
 
 - **packages' loading and updating should run on the login node, since compute nodes do not have access to the internet.**
 
-### MPI for julia
+### MPI for Julia
 
 see: [https://juliaparallel.github.io/MPI.jl/stable/configuration/](https://juliaparallel.github.io/MPI.jl/stable/configuration/)
 
@@ -130,3 +136,12 @@ parallel efficiency
 see detailed data [HERE](https://github.com/naezzell/accelqat/tree/main/performance_test/pi_test/test_result/pi_pe_result)(including CPU info).
 
 Notice: for the situation of one processor, mpi inter-processor communication did not happen, thus take less time then expect, and the data point is ignored in the plot.
+
+### GPU accelerated package
+Scalling on tf and n. As we can see the GPU acceleration get advantage when the input scale is large (n>=8). However it did not show obvious advantage when the time sequence (tf) is longer.
+
+![image](https://user-images.githubusercontent.com/18574971/101561112-921afb80-3979-11eb-8b0a-b7cb7ed67812.png)
+![image](https://user-images.githubusercontent.com/18574971/101561672-98f63e00-397a-11eb-8601-2701860f8b17.png)
+
+The test code can be find here [accelqat/cuda/scaling_test.jl](https://github.com/naezzell/accelqat/blob/main/cuda/scaling_test.jl).  
+The test result and relevent CPU information can be find here [accelqat/cuda/scaling_test_result/](https://github.com/naezzell/accelqat/tree/main/cuda/scaling_test_result)
