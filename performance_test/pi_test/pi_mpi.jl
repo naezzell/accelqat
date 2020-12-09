@@ -1,6 +1,6 @@
 using MPI
 function mpi_pi(NBIN::Int= 1000000000)::Float64
-    MPI.Init()
+    #MPI.Init()
     comm = MPI.COMM_WORLD
     myid = MPI.Comm_rank(comm)
     nprocs = MPI.Comm_size(comm)
