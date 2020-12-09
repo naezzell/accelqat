@@ -1,7 +1,14 @@
 # accelqat
-We accelerate the ~~`QuantumAnnealingTools.jl`~~ [`OpenQuantumTools.jl`](https://github.com/USCqserver/OpenQuantumTools.jl) package using Julia's equivalent of OpenMP, MPI, and CUDA.
+In this repo, we explore high-performance computing (HPC) parallism in Julia. After learning the basics, we apply what we learned to a real-world application: gpu-accelerating ~~`QuantumAnnealingTools.jl`~~ [`OpenQuantumTools.jl`](https://github.com/USCqserver/OpenQuantumTools.jl), a package for simulating open quantum systems. We start with a few users' guides explaining how to set up Julia on Discovery, the HPC cluster at USC. In particular, we show how to set up and use MPI and CUDA, how to install OpenQuantumTools, and how to edit OpenQuantumTools in "develop mode."
 
-Firstly we try pi code with different packages and test the performance. Then, we decide to use CUDA to accelerate the package. It shows the advantage when then calculating scale is large.
+For this project, we did the following
+1. Wrote a simple code to calculate PI in Julia--our "hello world" of HPC just as we did in the CSCI 596 course (see [here](https://github.com/naezzell/accelqat/tree/main/performance_test))
+2. Benchmarked the MPI implementation of PI, showing it's string and weak-scaling parallel efficiency (see [here](https://github.com/naezzell/accelqat/tree/main/performance_test/pi_test))
+3. Profiled the OpenQuantumTools package when annealing a quantum spin-glass Hamiltonian, identifying the scrhodinger equation solver as the bottleneck (see [here](https://github.com/naezzell/accelqat/blob/main/performance_test/final_project_profiling.jl))
+4. GPU-accelerated the solve_schrodinger bottleneck in OpenQuantumTools (see [here](https://github.com/naezzell/accelqat/tree/main/cuda) and [here](https://github.com/USCqserver/OpenQuantumTools.jl/blob/gpu-accel/src/QSolver/closed_system_solvers.jl))
+5. Bechmarked the performance of GPU-accelerated schrodinger equation solver, showing a speed-up for n = 8 up to n = 10 qubits (see bottom of this page)
+
+We found this a successful first crack at HPC with Julia, but as usual, there is always room for future work. Here, our future direction is straighforward: integrate our changes into the OpenQuantumTools.jl package properly and then attempt to GPU-accelerate the open quantum systems solvers. In other words, we only accelerated solve_schrodinger, but we also want to accerlate solve_lindblad, solve_redfield, etc...
 
 ## Setup on HPC
 
