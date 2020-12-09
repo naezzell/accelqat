@@ -1,5 +1,5 @@
-using OpenQuantumTools, CUDA, DifferentialEquations
-import OpenQuantumTools.⊗
+using QuantumAnnealingTools, CUDA, DifferentialEquations
+import QuantumAnnealingTools.⊗
 
 function make_connect_tuples(n::Int64)
     """
@@ -18,6 +18,7 @@ function make_connect_tuples(n::Int64)
     return connections
 end
 
+
 function make_spin_glass(n::Int64)
     """
     Create an [n] qubit spin-glass with couplings sampled
@@ -34,8 +35,8 @@ function anneal_spin_glass(n::Int64, tf::T where T<:Number)
     nano-seconds. Obtains spin-glass couplings from [load_dir].
     """
     # make Hamiltonians
-    init_H = standard_driver(n)
-    final_H = make_spin_glass(n)
+    init_H = float_to_32_cpu(standard_driver(n))
+    final_H = float_to_32_cpu(make_spin_glass(n))
     # get initial state
     init_state = ⊗([PauliVec[1][2] for _ in 1:n]...)
     H = DenseHamiltonian([(s)->1-s, (s)->s], [init_H, final_H], unit=:ħ)
@@ -51,8 +52,8 @@ function anneal_spin_glass_gpu(n::Int64, tf::T where T<:Number)
     nano-seconds. Obtains spin-glass couplings from [load_dir].
     """
     # make Hamiltonians
-    init_H = cu(standard_driver(n))
-    final_H = cu(make_spin_glass(n))
+    init_H = float_to_32_gpu(cu(standard_driver(n)))
+    final_H = float_to_32_gpu(cu(make_spin_glass(n)))
     # get initial state
     init_state = cu(⊗([PauliVec[1][2] for _ in 1:n]...))
     H = DenseHamiltonian([(s)->1-s, (s)->s], [init_H, final_H], unit=:ħ)
@@ -60,6 +61,20 @@ function anneal_spin_glass_gpu(n::Int64, tf::T where T<:Number)
     sol = solve_schrodinger_gpu(annealing, tf)
 
     return sol
+end
+
+function float_to_32_cpu(n::Array{Complex{Float64}})::Array{Complex{Float32}}
+    """
+    Convert to Float 64 arrays to Float 32 for improved runtime efficiency
+    """
+    return convert(Array{Complex{Float32}},n)
+end
+
+function float_to_32_gpu(n::CuArray{Complex{Float64}})::CuArray{Complex{Float32}}
+    """
+    Convert to Float 64 CUDA arrays to Float 32 for improved runtime efficiency
+    """
+    return convert(CuArray{Complex{Float32}},n)
 end
 
 @time anneal_spin_glass(3, 10);
