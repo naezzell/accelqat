@@ -5,11 +5,11 @@ Firstly we try pi code with different packages and test the performance. Then, w
 
 ## Setup on HPC
 
-### julia
+### Julia
 add julia package, (can also add to .bashrc like we did for MPI)  
     `$ module load julia`
 
-### install our repo
+### install package
 **Notice:** `QuantumAnnealingTools.jl`, `Qtbase.jl` now are open source and change name to [`OpenQuantumTools.jl`](https://github.com/USCqserver/OpenQuantumTools.jl), [`OpenQuantumBase.jl`](https://github.com/USCqserver/OpenQuantumBase.jl).
 Please follow their instruction for installation, if fail, can try with different julia package server like step 2. 
 
